@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-10">
+        <div class="bg-white max-w-md mx-auto rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-semibold text-center mb-4">Registration Form</h2>
+            <form id="userdata">
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="flex items-center">
+                        <label for="Name" class="w-32">Name</label>
+                        <input id="Name" placeholder="Enter Full Name" type="text" required
+                               class="border py-1 px-2 rounded-md w-full bg-gray-200">
+                    </div>
+                    <div class="flex items-center">
+                        <label for="email" class="w-32">Email</label>
+                        <input id="email" placeholder="Enter Email" type="email" required
+                               class="rounded-md w-full bg-gray-200 border py-1 px-2">
+                    </div>
+                    <div class="flex items-center">
+                        <label for="password" class="w-32">Password</label>
+                        <input id="password" placeholder="Enter Password" type="password"
+                               class="rounded-md border py-1 px-2  w-full bg-gray-200">
+                    </div>
+                    <div class="flex items-center">
+                        <label for="dob" class="w-32">Date Of Birth</label>
+                        <input id="dob" placeholder="dd/mm/yyyy" type="date"
+                               class="border py-1 px-2 rounded-md w-full bg-gray-200 text-pink-600">
+                        <span id="error" style="display: none; color: red;">Age must be between 18 and 55</span>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="checkbox" type="checkbox" class="mr-2">
+                        <label for="checkbox" class="text-sm">Accept Terms & Conditions</label>
+                    </div>
+                    <div class="mt-4">
+                        <button type="submit" class="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="bg-white container mx-auto py-5 bg-white mx-auto rounded-lg shadow-md p-6 max-w-lg">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl font-bold mb-4 text-center">Entries</h1>
+            <div class="overflow-x-auto">
+                <table id="entriesTable" class="min-w-full border rounded-lg overflow-hidden">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2">Name</th>
+                            <th class="px-4 py-2">Email</th>
+                            <th class="px-4 py-2">Password</th>
+                            <th class="px-4 py-2">Dob</th>
+                            <th class="px-4 py-2">Accepted terms?</th>
+                        </tr>
+                    </thead>
+                    <tbody id="entriesBody" class="bg-white">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
